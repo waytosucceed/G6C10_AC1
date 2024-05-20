@@ -1,0 +1,223 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="Logo.png">
+
+
+        <style>
+
+            #storydiv { 
+                  height: 100%;
+                  position: relative;         
+                }
+                        
+              #storydiv p {
+                  margin: 0;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+              }
+              
+              .maindiv{
+                  border:5px ridge rgb(12, 96, 206);
+                  margin:1%;
+                  border-radius:20px
+              }
+  
+              p{
+                  font-size:30px;
+                  font-weight: bold;
+              }
+  
+             
+  
+              #nextbtn, #backbtn, #newbtn{
+                  width: 25%;
+                  font-size:20px;
+                  margin-right: 5%;
+                  position: relative;
+                  
+              }
+  
+              #backbtn, #newbtn{
+                  display:none;
+              }
+  
+              #family{
+                  width:95%;
+                  height:95%;
+              }
+  
+              #about{
+                  font-weight: bold;
+                  font-size:40px;
+                  color:rgb(7, 7, 89)
+              }
+  
+              #story{ 
+                  font-size: 1.30vw;
+                  border-radius: 20px;
+              }
+  
+              #imgdiv{
+                  position:relative;
+              }
+           
+          
+          </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>
+        <br>
+        
+        <center>
+            <h2 id="about">Adverbs and their types.</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+            <center>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                <img id="family" src="2.jpg" style="width:100%;"> 
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11"  id='storydiv'>
+                <p id="story" style="text-align:left; width:100%;">
+
+                    In the previous two classes we studied altogether four types of adverbs namely: <br>
+                   1. Adverbs of Place &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2. Adverbs of Time <br>
+                   3. Adverbs of Frequency &nbsp; &nbsp; &nbsp; &nbsp; 4. Adverbs of Manner  <br> <br> <br>
+                
+                   
+                  <b style="color:blueviolet"> Today we are going to focus on the following four types of adverbs: </b><br> <br>
+                    1.Adverbs of Degree  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.Adverbs of Direction <br>
+                    3.Conjunctive Adverbs &nbsp; &nbsp; &nbsp; &nbsp; 4.Relative Adverbs <br>  
+                    <br>
+                
+                    Before we focus on the next four types of adverbs let us catch up with the story!     
+                
+                </p>     
+            </div>
+        </center>
+        </div>
+        <br>
+        <div class="" style="text-align:center; padding-top:1%">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button>
+            <button id="newbtn" onclick="newpage()" class="btn btn-success">Next</button>
+            
+  
+        </div>
+    
+
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg", "Assets/7.jpg", "Assets/8.jpg", "Assets/9.jpg", "Assets/10.jpg", "Assets/11.jpg", "Assets/12.jpg", "Assets/13.jpg"];
+            var para=["In the previous class, we read that two school-going girls usually interacted with each other from either side of the road while waiting for their school buses through the exchange of smiles and hand gestures. One morning, Daisy saw Dora crying, and she initiated a conversation to know why Dora was sad. After their first conversation, Daisy came to know that Dora could not find her cat, which was the last gift from her grandmother. Daisy, being kind and polite, offered to help Dora search for the lost cat. <br> <br>Today, we will continue from the point where Dora informs Daisy that her cat never leaves the house when sick and that her entire family could not find it even after a rigorous search.",
+
+                      "<span style='font-weight: bolder;background-color: blueviolet;color: white;'>Daisy</span>:  I am completely sure he must be somewhere in your house. My father is a veterinary doctor. He loves cats and keeps telling me about cat behaviours. Tell me something Dora, is your cat sociable enough? <br> <br> <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DORA </span>: Yes, he is.",
+
+                      " <img src='3th.jpg' style='width: 100%;' alt=''> ",
+
+
+                      "<span style='font-weight: bolder;background-color: blueviolet;color: white;'>DAISY</span>: sociable cats usually withdraw from any kind of interaction when sick and they try not to move from their known space. You said that your cat is sociable and never leaves the house when sick; therefore, he must be in your house or within the boundary of your house.<br><br> <i> Pointing at a house in the distance,</i> Dora said: <br><br>   <span style='font-weight: bolder;background-color: blueviolet;color: white;'>  DORA</span>: That’s the house in which I live Daisy. Please come with me.<br><br> <span style='font-weight: bolder;background-color: blueviolet;color: white;'> DAISY </span>: I have to go northwards to reach home. My mother will be waiting for me. I need to inform her.",
+
+                      "Dora’s cat being social and never leaving the house when sick helped Daisy reach the conclusion that the cat is within the house because social cats do not leave their known space when unwell. The word <u> <span style='font-weight: bolder;color: blueviolet;'> ‘therefore’ </span></u> helps Daisy build that cause-and-effect relation between the facts.<u> <span style='color: blueviolet;'> ‘Therefore’ is a conjunctive adverb. </span></u> <br> <br> <span style='font-weight: bolder;'> In a sentence, <u> conjunctive adverbs </u> join clauses together, forming relations between expressions such as addition, contrast, and order.</span> Conjunctive adverbs also help us express the sense of <span style='font-weight: bolder;font-style:italic;'> emphasis, clarification, comparison and consequence.</span>",
+
+                      "<img  src='6th.jpg' style='width: 100%;' alt=''>",
+
+                      "<span style='font-weight: bolder;background-color: blueviolet;color: white;'>Reminder:</span><br> <br>Relative clauses are subordinate clauses that modify a noun or a pronoun. In the sentence “That’s the house where I live, Daisy”, ‘where I live’ is modifying the noun ‘That house’, “where” is a relative pronoun.",
+
+                      "Reading the sentences below will give us better clarity: <br><br> 1) My mother visited the neighbourhood <span style='font-weight: bolder;color: blueviolet;'> where </span> the mayor lives. <br> <br> 2) Zen knows the reason <span style='font-weight: bolder;color: blueviolet;'> why </span> they left.<br> <br> Sara mentioned the time <span style='font-weight: bolder;color: blueviolet;'> when </span> the snowfall started.",
+
+                      "Reading the sentences below will give us better clarity: <br> <br> 1. The policeman drove his Jeep <span style='font-weight: bolder;color: blueviolet;'> backwards </span> for 15 minutes to catch the robber. <br> 2. I started my journey <span style='font-weight: bolder;color: blueviolet;'> upward.</span> <br> 3. Please move the box <span style='font-weight: bolder;color: blueviolet;'> sideways.</span> <br> 4. The horses did not move  <span style='font-weight: bolder;color: blueviolet;'>forward </span> because the weather was unruly. <br> 5. Don’t swim <span style='font-weight: bolder;color: blueviolet;'> northwards </span> from here, as you might encounter sharks.",
+
+
+               
+
+                     
+
+                    
+                     
+
+                    
+
+                      
+                    ]
+            
+            
+            var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("newbtn").style.display="inline-block"
+                   
+                    document.getElementById("about").innerHTML = "Found a friend and a cat - Part 2";
+                    document.getElementById("story").innerHTML = "Daisy was right. Dora’s cat, 'Butter', had actually not left her house. The cat was found inside an unused storeroom in the basement of the house. Daisy’s father treated ‘Butter’. The medicines and the prescribed diet did wonders. At this stage, two things happened simultaneously in the lives of Dora and Daisy. The cat’s health improved unimaginably, and their friendship blossomed beautifully. Dora, Daisy, and Butter clicked a picture to keep it as a memory for life and that Christmas."
+                    document.getElementById("family").src = "last.jpg";
+                   
+                   
+                   
+
+                    
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="Found a friend and a cat - Part 2"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+            function newpage(){
+                window.location="ac2.html"
+            }
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.25vw"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Adverbs and their types"
+                    document.getElementById("story").innerHTML = 'In the previous two classes we studied altogether four types of adverbs namely: <br>  1. Adverbs of Place &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 2. Adverbs of Time <br> 3. Adverbs of Frequency &nbsp; &nbsp; &nbsp; &nbsp; 4. Adverbs of Manner  <br> <br> <br>   <b style="color:blueviolet"> Today we are going to focus on the following four types of adverbs: </b><br> <br>   1.Adverbs of Degree  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2.Adverbs of Direction <br> 3.Conjunctive Adverbs &nbsp; &nbsp; &nbsp; &nbsp; 4.Relative Adverbs <br> <br> Before we focus on the next four types of adverbs let us catch up with the story! ';
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.25vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="Found a friend and a cat - Part 2"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
